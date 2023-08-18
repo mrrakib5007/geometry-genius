@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+
+    <!-- Tailwind CSS and DaisyUI CDN  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- header section -->
+    <header>
+        <div class="bg-[#1090D81A] flex justify-between px-20 py-5">
+            <div id="header-left">
+                <h3 class="text-[#111111CC] text-3xl font-bold">Interactive</h3>
+                <p class="text-xl text-[#11111199]">Geometry Genius</p>
+            </div>
+            <button class="btn bg-blue-600 hover:bg-blue-600 text-white px-5">Blog</button>
+        </div>
+    </header>
+
+    <!-- main section  -->
+    <main class="my-10 px-5 flex flex-col-reverse lg:flex-row gap-5">
+        <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+            <!-- card 1 -->
+            <div class="card w-72 bg-base-100 shadow-2xl  py-5">
+                <figure><img src="images/triangle.png" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="text-xl font-bold text-center">Triangle</h2>
+                  <p class="text-center">Area (A) = 0.5 × b × h</p>
+                  <!-- input container  -->
+                  <div id="" class="grid grid-cols-2 gap-2 justify-center">
+                    <div id="input-box-1" class="">
+                        <input id="base-field" type="text" placeholder="Base" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
+                        <span>cm</span>
+                    </div>
+                    <div id="input-box-2">
+                        <input id="height-field" type="text" placeholder="Height" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
+                        <label for="">cm</label>
+                    </div>
+                  </div>
+                  <p class="font-xl">Area: <span id="triangle-area-element">0</span> cm<sup>2</sup></p>
+                  <div id="btn-container" class="card-actions justify-center mt-5">
+                    <button onclick="calculateTriangleArea()" class="btn bg-blue-600 hover:bg-blue-600 text-white w-2/3">Calculate</button>
+                  </div>
+                </div>
+              </div>
+            <!-- card 2 -->
+            <div class="card w-72 bg-base-100 shadow-xl border-gray-300 border-2 py-5">
+                <figure><img src="images/rectangle.png" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="text-xl font-bold text-center">Rectangle</h2>
+                  <p class="text-center">Area (A) = w × l</p>
+                  <!-- input container  -->
+                  <div id="" class="grid grid-cols-2 gap-2 justify-center">
+                    <div id="input-box-1" class="">
+                        <input id="length-field" type="text" placeholder="Length" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
+                        <label for="">cm</label>
+                    </div>
+                    <div id="input-box-2">
+                        <input id="width-field" type="text" placeholder="Width" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
+                        <label for="">cm</label>
+                    </div>
+                  </div>
+                  <p class="font-xl">Area: <span id="rectangle-area-element">0</span> cm<sup>2</sup></p>
+                  <div class="card-actions justify-center mt-5">
+                    <button onclick="calculateRectangleArea()" class="btn bg-blue-600 hover:bg-blue-600 text-white w-2/3">Calculate</button>
+                  </div>
+                </div>
+              </div>
+
+            <!-- card 3 -->
+            <div class="card w-72 bg-base-100 shadow-xl border-gray-300 border-2 py-5">
+                <figure><img src="images/parallelogram.png" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="text-xl font-bold text-center">Parallelogram</h2>
+                  <p class="text-center">Area (A) = b × h</p>
+                  <!-- input container  -->
+                  <div id="" class="grid grid-cols-2 gap-2 justify-center">
+                    <div id="input-box-1" class="">
+                        <input type="text" placeholder="Base" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
+                        <label for="">cm</label>
+                    </div>
+                    <div id="input-box-2">
+                        <input type="text" placeholder="Height" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
+                        <label for="">cm</label>
+                    </div>
+                  </div>
+                  <p class="font-xl">Area: <span id="triangle-area-element">0</span> cm<sup>2</sup></p>
+                  <div class="card-actions justify-center mt-5">
+                    <button class="btn bg-blue-600 hover:bg-blue-600 text-white w-2/3">Calculate</button>
+                  </div>
+                </div>
+              </div>
+
+            <!-- card 4 -->
+            <div class="card w-72 bg-base-100 shadow-xl border-gray-300 border-2 py-5">
+                <figure><img src="images/rhombus.png" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="text-xl font-bold text-center">Rhombus</h2>
+                  <p class="text-center">Area (A) = 0.5 × d<sub>1</sub> × d<sub>2</sub></p>
+                  <!-- input container  -->
+                  <div id="" class="grid grid-cols-2 gap-2 justify-center">
+                    <div id="input-box-1" class="">
+                        <input type="text" placeholder="d1" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
+                        <label for="">cm</label>
+                    </div>
+                    <div id="input-box-2">
+                        <input type="text" placeholder="d2" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
+                        <label for="">cm</label>
+                    </div>
+                  </div>
+                  <p class="font-xl">Area: <span id="triangle-area-element">0</span> cm<sup>2</sup></p>
+                  <div class="card-actions justify-center mt-5">
+                    <button class="btn bg-blue-600 hover:bg-blue-600 text-white w-2/3">Calculate</button>
+                  </div>
+                </div>
+              </div>
+
+            <!-- card 5 -->
+            <div class="card w-72 bg-base-100 shadow-xl border-gray-300 border-2 py-5">
+                <figure><img src="images/pentagon.png" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="text-xl font-bold text-center">Pentagon</h2>
+                  <p class="text-center">Area (A) = 0.5 × p × b</p>
+                  <!-- input container  -->
+                  <div id="" class="grid grid-cols-2 gap-2 justify-center">
+                    <div id="input-box-1" class="">
+                        <input type="text" placeholder="p" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
+                        <label for="">cm</label>
+                    </div>
+                    <div id="input-box-2">
+                        <input type="text" placeholder="b" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
+                        <label for="">cm</label>
+                    </div>
+                  </div>
+                  <p class="font-xl">Area: <span id="triangle-area-element">0</span> cm<sup>2</sup></p>
+                  <div class="card-actions justify-center mt-5">
+                    <button class="btn bg-blue-600 hover:bg-blue-600 text-white w-2/3">Calculate</button>
+                  </div>
+                </div>
+              </div>
+
+            <!-- card 6 -->
+            <div class="card w-72 bg-base-100 shadow-xl border-gray-300 border-2 py-5">
+                <figure><img src="images/ellipse.png" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="text-xl font-bold text-center">Ellipse</h2>
+                  <p class="text-center">Area (A) = 𝝅ab</p>
+                  <!-- input container  -->
+                  <div id="" class="grid grid-cols-2 gap-2 justify-center">
+                    <div id="input-box-1" class="">
+                        <input type="text" placeholder="a" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
+                        <label for="">cm</label>
+                    </div>
+                    <div id="input-box-2">
+                        <input type="text" placeholder="b" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
+                        <label for="">cm</label>
+                    </div>
+                  </div>
+                  <p class="font-xl">Area: <span id="triangle-area-element">0</span> cm<sup>2</sup></p>
+                  <div class="card-actions justify-center mt-5">
+                    <button class="btn bg-blue-600 hover:bg-blue-600 text-white w-2/3">Calculate</button>
+                  </div>
+                </div>
+              </div>
+
+
+            
+        </div>
+        <div class="w-[300px]">
+            <h3 class="text-xl text-[#111111CC] text-center font-bold mb-5">Area Calculation</h3>
+            <div class="flex gap-3 justify-center items-center mb-2">
+                <label for="">1. Ellipse</label>
+                <label for="">125cm</label>
+                <button class="px-5 py-2 rounded-md bg-blue-600 text-white">View</button>
+            </div>
+            <div class="flex gap-3 justify-center items-center">
+                <label for="">1. Ellipse</label>
+                <label for="">125cm</label>
+                <button class="px-5 py-2 rounded-md bg-blue-600 text-white">View</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer section  -->
+    <footer></footer>
+
+    <!-- custom js  -->
+    <script src="custom.js"></script>
+</body>
+</html>
