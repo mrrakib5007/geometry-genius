@@ -6,27 +6,37 @@ function getInputFieldById(fieldId){
     return inputFieldValue;
 }
 
+function setElementArea(elementId, area){
+    const elementArea = document.getElementById(elementId);
+    elementArea.innerText = area;
+}
+
+
 
 // calculate Triangle Area
 function calculateTriangleArea(){
-    const baseField = getInputFieldById('base-field');
-    const heightField = getInputFieldById('height-field');
-
+    const baseField = getInputFieldById('triangle-base-field');
+    const heightField = getInputFieldById('triangle-height-field');
     const area = 0.5 * baseField * heightField; //Area = 0.5 × b × h
     
-    // get and set area
-    const triangleAreaElement = document.getElementById('triangle-area-element');
-    triangleAreaElement.innerText = area;
+    setElementArea('triangle-area-element', area);
 }
 
 // calculate Rectangle Area
 function calculateRectangleArea(){
-    
-    const widthField    = getInputFieldById('width-field');
-    const lengthField    = getInputFieldById('length-field');
-
+    const widthField    = getInputFieldById('rectangle-width-field');
+    const lengthField    = getInputFieldById('rectangle-length-field');
     const area = widthField * lengthField; // Area (A) = w × l
 
-    const rectangleAreaElement = document.getElementById('rectangle-area-element');
-    rectangleAreaElement.innerText = area;
+    setElementArea('rectangle-area-element', area);
+}
+
+
+// calculate Parallelogram Area
+function calculateParallelogramArea(){
+    const baseField = getInputFieldById('parallelogram-base-field');
+    const heightField = getInputFieldById('parallelogram-height-field');
+    const area = baseField * heightField;  // Area (A) = b × h
+
+    setElementArea('parallelogram-area-element', area);
 }

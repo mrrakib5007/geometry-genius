@@ -34,11 +34,11 @@
                   <!-- input container  -->
                   <div id="" class="grid grid-cols-2 gap-2 justify-center">
                     <div id="input-box-1" class="">
-                        <input id="base-field" type="text" placeholder="Base" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
+                        <input id="triangle-base-field" type="text" placeholder="Base" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
                         <span>cm</span>
                     </div>
                     <div id="input-box-2">
-                        <input id="height-field" type="text" placeholder="Height" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
+                        <input id="triangle-height-field" type="text" placeholder="Height" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
                         <label for="">cm</label>
                     </div>
                   </div>
@@ -57,11 +57,11 @@
                   <!-- input container  -->
                   <div id="" class="grid grid-cols-2 gap-2 justify-center">
                     <div id="input-box-1" class="">
-                        <input id="length-field" type="text" placeholder="Length" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
+                        <input id="rectangle-length-field" type="text" placeholder="Length" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
                         <label for="">cm</label>
                     </div>
                     <div id="input-box-2">
-                        <input id="width-field" type="text" placeholder="Width" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
+                        <input id="rectangle-width-field" type="text" placeholder="Width" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
                         <label for="">cm</label>
                     </div>
                   </div>
@@ -81,17 +81,17 @@
                   <!-- input container  -->
                   <div id="" class="grid grid-cols-2 gap-2 justify-center">
                     <div id="input-box-1" class="">
-                        <input type="text" placeholder="Base" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
+                        <input id="parallelogram-base-field" type="text" placeholder="Base" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
                         <label for="">cm</label>
                     </div>
                     <div id="input-box-2">
-                        <input type="text" placeholder="Height" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
+                        <input id="parallelogram-height-field" type="text" placeholder="Height" class="w-20 border-2 border-slate-400 outline-none px-2 py-1 rounded-md">
                         <label for="">cm</label>
                     </div>
                   </div>
-                  <p class="font-xl">Area: <span id="triangle-area-element">0</span> cm<sup>2</sup></p>
+                  <p class="font-xl">Area: <span id="parallelogram-area-element">0</span> cm<sup>2</sup></p>
                   <div class="card-actions justify-center mt-5">
-                    <button class="btn bg-blue-600 hover:bg-blue-600 text-white w-2/3">Calculate</button>
+                    <button onclick="calculateParallelogramArea()" class="btn bg-blue-600 hover:bg-blue-600 text-white w-2/3">Calculate</button>
                   </div>
                 </div>
               </div>
